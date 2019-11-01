@@ -1,10 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const name = 'Vishnu'
-const element = <h1>hello,{name}</h1>
+
+
+const user = {
+  firstName : 'Vishnu',
+  lastName : 'Verma'
+};
+
+let fullName = function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const element = (
+  <h1>
+    Hello, {fullName(user)}!
+  </h1>
+);
+
+
 
 
 ReactDOM.render(
    element
-    , document.getElementById("root"))
+    , document.getElementById("root"));
