@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 
 //functional component : 
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, Vishnu!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
 }
-const element = <Welcome name = "Vishnu"/>
-ReactDOM.render(
-   element
-    , document.getElementById("root"));
+
+setInterval(tick, 1000);
