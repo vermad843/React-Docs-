@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Comment from './Comment';
+import Clock from './Clock';
 
 
 ReactDOM.render(
-  <Comment/>,
+  <Clock/>,
   document.getElementById('root')
 );
 
