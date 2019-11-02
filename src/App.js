@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 
 class App extends Component {
-
-    handleClick() {
-        console.log('Clicked!!!')
+    constructor(props) {
+        super(props);
+        this.state = { 
+            isToggleOn : true
+         };
+         this.handleClick = this.handleClick.bind(this);
     }
-       render() {
-           return (
-               <div className = "App">
-                  <button onClick= {this.handleClick}>Click Me!!</button>
-               </div>
-           );
-       }
-   }
+    handleClick() {
+        this.setState((state) => ({
+            isToggleOn: !state.isToggleOn
+        }));
+    }
+    render() {
+        const {isToggleOn} = this.state;
+        return (
+           <button onClick = {this.handleClick}>
+               {isToggleOn ? 'ON' : 'OFF'}
+           </button>            
+        );
+    }
+}
 
 export default App;
