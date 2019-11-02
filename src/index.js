@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-//functional component : 
+//class based  component : 
 
-function tick() {
-  const element = (
-    <div>
-      <h1>Hello, Vishnu!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
-  ReactDOM.render(element, document.getElementById('root'));
+
+class index extends Component {
+  render() {
+    return (
+      <h1>Hello,{this.props.name}</h1>
+    );
+  }
 }
+export default index;
 
-setInterval(tick, 1000);
+
+
+
+
+
+
+
