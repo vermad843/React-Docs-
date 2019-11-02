@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
-import FormattedDate from './FormattedDate';
-
-
 
 class App extends Component {
-    constructor() {
-     super();
-     this.state = {
-         date : new Date()
-     }
+
+    handleClick() {
+        console.log('Clicked!!!')
     }
-    render() {
-        return (
-           <div>
-              <FormattedDate date = {this.state.date}/>
-           </div>  
-        );
-    }
-}
+       render() {
+           return (
+               <div className = "App">
+                  <button onClick= {this.handleClick}>Click Me!!</button>
+               </div>
+           );
+       }
+   }
 
 export default App;
