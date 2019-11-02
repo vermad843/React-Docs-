@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Comment from './Comment';
 
 
 ReactDOM.render(
-  <App/>,
+  <Comment/>,
   document.getElementById('root')
 );
 
