@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
+import FormattedDate from './FormattedDate';
 
 
 
 class App extends Component {
     constructor() {
-        super();
-        this.state = {
-            posts : [],
-            comments : []
-        };
+     super();
+     this.state = {
+         date : new Date()
+     }
     }
-
-
-    componentDidMount() {
-        fetchPosts().then((response) => {
-            this.setState({
-                posts : response.posts
-            });
-        });
-
-        fetchComments().then((response) => {
-            this.setState({
-                comments : response.comments
-            });
-        });
-    }
-
     render() {
         return (
            <div>
-               <h1>Hello World</h1>
+              <FormattedDate date = {this.state.date}/>
            </div>  
         );
     }
